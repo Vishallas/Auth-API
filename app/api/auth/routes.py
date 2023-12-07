@@ -16,7 +16,7 @@ def insert_user():
         return {'Status':'Fail',
                 'reason':'user exist'}
 
-@auth_bp.route('/login',methods=['POST'])
+@auth_bp.route('/signin',methods=['POST'])
 def login():
     if query.check_login(request.json['id'],request.json['passw']):
         return {'Status':'Success'}
